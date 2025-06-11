@@ -9,19 +9,21 @@ const config = getConfigByLang(lang)
 ---
 
 <header class="flex h-24 w-full items-center justify-between">
-  <div class="flex items-center gap-2">
-    <img
-      src={config.logo}
-      alt={`${config.siteName} logo`}
-      class="hidden h-10 w-10 rounded-full md:block"
-      loading="lazy"
-      width="40"
-      height="40"
-    />
-    <a href="/" aria-label={`${config.siteName}`}>
-      <div class="text-2xl font-semibold">{config.siteName}</div>
-    </a>
-  </div>
+  <a href="/" aria-label={`${config.siteName}`}>
+    <div class="flex items-center gap-2">
+      <img
+        src={config.logo}
+        alt={`${config.siteName} logo`}
+        class="h-10 w-10 rounded-full"
+        loading="lazy"
+        width="40"
+        height="40"
+      />
+      <div class="hidden text-2xl font-semibold md:block">
+        {config.siteName}
+      </div>
+    </div>
+  </a>
 
   <div class="flex items-center gap-6">
     {
