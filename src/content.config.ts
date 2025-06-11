@@ -11,23 +11,11 @@ const postSchema = z.object({
   tags: z.array(z.string()).optional(),
 })
 
-const enPostsCollection = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/posts/en" }),
-  schema: postSchema,
-})
-
-const zhPostsCollection = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/posts/zh" }),
-  schema: postSchema,
-})
-
 const itPostsCollection = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/posts/it" }),
   schema: postSchema,
 })
 
 export const collections = {
-  enPosts: enPostsCollection,
-  zhPosts: zhPostsCollection,
   itPosts: itPostsCollection,
 }

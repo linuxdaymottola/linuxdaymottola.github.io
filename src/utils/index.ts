@@ -20,11 +20,9 @@ export const formatDate = (
 
 export const getPostsByLocale = async (locale: string) => {
   const collectionMap = new Map<string, string>([
-    ["en", "enPosts"],
-    ["zh", "zhPosts"],
     ["it", "itPosts"],
   ]);
-  const collectionName = collectionMap.get(locale) || "enPosts";
+  const collectionName = collectionMap.get(locale) || "itPosts";
   const posts = await getCollection(collectionName as any)
   return posts.sort(
     (a: any, b: any) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),

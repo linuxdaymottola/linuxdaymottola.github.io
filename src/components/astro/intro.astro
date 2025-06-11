@@ -1,16 +1,10 @@
 ---
-import IntroContentEn from "~/config/en/intro.mdx"
 import IntroContentIt from "~/config/it/intro.mdx"
-import IntroContentZh from "~/config/zh/intro.mdx"
 import { getLangFromUrl } from "~/i18n/utils"
 
 const lang = getLangFromUrl(Astro.url)
-const introContentMap = new Map([
-  ["zh", IntroContentZh],
-  ["en", IntroContentEn],
-  ["it", IntroContentIt],
-])
-const IntroContent = introContentMap.get(lang) || IntroContentEn
+const introContentMap = new Map([["it", IntroContentIt]])
+const IntroContent = introContentMap.get(lang) || IntroContentIt
 ---
 
 <div class="my-10">

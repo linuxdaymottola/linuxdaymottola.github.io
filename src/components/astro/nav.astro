@@ -4,11 +4,7 @@ import { getLangFromUrl, useTranslations } from "~/i18n/utils"
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
-const navigationMap = new Map([
-  // ["zh", zh.navigation],
-  // ["en", en.navigation],
-  ["it", it.navigation],
-])
+const navigationMap = new Map([["it", it.navigation]])
 const { home, archive, custom, links, about } =
   navigationMap.get(lang) ?? it.navigation
 ---

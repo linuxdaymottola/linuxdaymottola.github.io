@@ -1,10 +1,8 @@
 ---
 import LinkCard from "~/components/astro/link-card.astro"
 import { getConfigByLang } from "~/config"
-import LinksContentEn from "~/config/en/links.mdx"
 import LinksContentIt from "~/config/it/links.mdx"
 import { links } from "~/config/links"
-import LinksContentZh from "~/config/zh/links.mdx"
 import { getLangFromUrl, useTranslations } from "~/i18n/utils"
 import MainLayout from "~/layouts/main.astro"
 import { getLanguagePaths } from "~/utils/langs"
@@ -12,14 +10,12 @@ export function getStaticPaths() {
   return getLanguagePaths()
 }
 const linksContentMap = {
-  zh: LinksContentZh,
-  en: LinksContentEn,
   it: LinksContentIt,
 }
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
-const LinksContent = linksContentMap[lang] //langs ? LinksContentZh : LinksContentEn
+const LinksContent = linksContentMap[lang]
 const pageMeta = getConfigByLang(lang).pageMeta
 ---
 

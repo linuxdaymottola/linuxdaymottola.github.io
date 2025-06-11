@@ -46,7 +46,7 @@ const { Content } = await render(post)
     <div class="space-x-3 pb-10 text-sm text-gray-500">
       {
         post.data.tags.map((tag: string) => (
-          <a href={`/${lang}/tags/${tag}`} class="no-underline">
+          <a href={`/tags/${tag}`} class="no-underline">
             <p class="inline-block hover:scale-105">#{tag}</p>
           </a>
         ))
