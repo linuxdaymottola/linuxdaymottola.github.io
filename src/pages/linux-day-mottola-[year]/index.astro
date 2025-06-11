@@ -1,11 +1,11 @@
 ---
-import { render } from "astro:content"
+import Event from "~/components/astro/event.astro"
 import { langs } from "~/i18n/ui"
 import { getLangFromUrl } from "~/i18n/utils"
 import MainLayout from "~/layouts/main.astro"
 import "~/styles/post.css"
 import "~/styles/post.scss"
-import { formatDate, getEventsByLocale } from "~/utils"
+import { getEventsByLocale } from "~/utils"
 
 export async function getStaticPaths() {
     const allPaths = []
@@ -30,11 +30,12 @@ const lang = getLangFromUrl(Astro.url)
 
 const { event } = Astro.props
 
-const { Content } = await render(event)
+// const { Content } = await render(event)
 ---
 
 <MainLayout {...event.data}>
-    <article class="prose dark:prose-invert w-full max-w-3xl overflow-hidden">
+    <Event event={event} lang={lang} />
+    <!-- <article class="prose dark:prose-invert w-full max-w-3xl overflow-hidden">
         <div class="flex flex-col gap-2">
             <h2 class="!my-0 text-3xl font-semibold">{event.data.title}</h2>
             <div class="my-3 text-gray-500 dark:text-white/80">
@@ -55,5 +56,5 @@ const { Content } = await render(event)
                 ))
             }
         </div>
-    </article>
+    </article> -->
 </MainLayout>
