@@ -1,4 +1,4 @@
-import { Github, Twitter } from "lucide-react";
+import { Facebook, Github, Instagram, Twitter } from "lucide-react";
 
 export const defaultLanguage: string = "it"
 
@@ -14,6 +14,16 @@ export const common = {
       icon: Twitter,
       label: "X",
       link: "https://x.com/linuxdaymottola",
+    },
+    {
+      icon: Facebook,
+      label: "Facebook",
+      link: "https://facebook.com/linuxdaymottola",
+    },
+    {
+      icon: Instagram,
+      label: "Instagram",
+      link: "https://instagram.com/linuxdaymottola",
     },
     {
       icon: Github,
