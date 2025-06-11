@@ -4,6 +4,7 @@ export const defaultLanguage: string = "it"
 
 export const common = {
   domain: "https://www.linuxdaymottola.it",
+  logo: "/images/logo.jpg",
   meta: {
     favicon: "/avatar.png",
     url: "https://www.linuxdaymottola.it",
@@ -35,7 +36,7 @@ export const common = {
   navigation: {
     home: true,
     events: true,
-    archive: true,
+    archive: false,
     // custom: [
     //   {
     //     label: "CamLife",
@@ -50,7 +51,7 @@ export const common = {
   comments: {
     enabled: true,
     twikoo: {
-      enabled: true,
+      enabled: false,
       // replace with your own envId
       envId: import.meta.env.PUBLIC_TWIKOO_ENV_ID ?? "",
     },
