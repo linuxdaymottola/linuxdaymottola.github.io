@@ -2,11 +2,11 @@
 title: "Linux Day Mottola 2019"
 pubDate: 2019-10-26
 description: "Manifestazione nazionale Linux Day, edizione 2019."
-ogImage: "https://sunguoqi.com/me.png"
+ogImage: "/images/events/linuxday2019.jpg"
 author: "Linux Day Mottola Team"
 image:
-  url: "https://docs.astro.build/assets/rose.webp"
-  alt: "The Astro logo on a dark background with a pink glow."
+  url: "/images/events/linuxday2019.jpg"
+  alt: "Linux Day 2019"
 tags: ["linuxday"]
 ---
 ![Linux Day 2019 Flyer](/images/events/linuxday2019.jpg)

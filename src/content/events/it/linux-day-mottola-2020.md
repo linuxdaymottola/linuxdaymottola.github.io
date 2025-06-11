@@ -2,10 +2,10 @@
 title: "Linux Day Mottola 2020"
 pubDate: 2020-10-22
 description: "Manifestazione nazionale Linux Day, edizione 2020."
-ogImage: "https://sunguoqi.com/me.png"
+ogImage: "/images/cover.png"
 author: "Linux Day Mottola Team"
 image:
-  url: "https://docs.astro.build/assets/rose.webp"
+  url: "/images/cover.png"
   alt: "The Astro logo on a dark background with a pink glow."
 tags: ["linuxday"]
 ---

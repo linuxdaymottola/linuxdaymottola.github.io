@@ -24,6 +24,7 @@ export const common = {
   rss: true,
   navigation: {
     home: true,
+    events: true,
     archive: true,
     // custom: [
     //   {

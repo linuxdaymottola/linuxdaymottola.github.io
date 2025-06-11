@@ -5,7 +5,7 @@ import { getLangFromUrl, useTranslations } from "~/i18n/utils"
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 const navigationMap = new Map([["it", it.navigation]])
-const { home, archive, custom, links, about } =
+const { home, archive, custom, links, about, events } =
   navigationMap.get(lang) ?? it.navigation
 ---
 
@@ -22,6 +22,19 @@ const { home, archive, custom, links, about } =
         data-astro-prefetch="viewport"
       >
         <p>{t("nav.home")}</p>
+      </a>
+    )
+  }
+  {
+    events && (
+      <a
+        href={`/events`}
+        class="hover:underline hover:underline-offset-4"
+        aria-label={t("nav.events")}
+        title={t("nav.events")}
+        data-astro-prefetch="viewport"
+      >
+        <p>{t("nav.events")}</p>
       </a>
     )
   }

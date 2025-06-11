@@ -2,11 +2,11 @@
 title: "Linux Day Mottola 2016"
 pubDate: 2016-10-22
 description: "Manifestazione nazionale Linux Day, edizione 2016."
-ogImage: "https://sunguoqi.com/me.png"
+ogImage: "/images/events/linuxday2016.jpg"
 author: "Linux Day Mottola Team"
 image:
-  url: "https://docs.astro.build/assets/rose.webp"
-  alt: "The Astro logo on a dark background with a pink glow."
+  url: "/images/events/linuxday2016.jpg"
+  alt: "Linux Day 2016"
 tags: ["linuxday"]
 ---
 ![Linux Day 2016 Flyer](/images/events/linuxday2016.jpg)

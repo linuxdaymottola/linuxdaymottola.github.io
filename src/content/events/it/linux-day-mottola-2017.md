@@ -6,7 +6,7 @@ ogImage: "/images/events/linuxday2017.jpg"
 author: "Linux Day Mottola Team"
 image:
   url: "/images/events/linuxday2017.jpg"
-  alt: "The Astro logo on a dark background with a pink glow."
+  alt: "Linux Day 2017"
 tags: ["linuxday"]
 ---
 ![Linux Day 2017 Flyer](/images/events/linuxday2017.jpg)

@@ -1,6 +1,4 @@
 export const languages = {
-  // en: "English",
-  // zh: "简体中文",
   it: "Italiano",
 }
 
@@ -11,6 +9,7 @@ export const langs = ["it"]
 export const ui = {
   it: {
     "nav.home": "Home",
+    "nav.events": "Eventi",
     "nav.archive": "Archivio",
     "nav.about": "Chi siamo",
     "nav.links": "Link",
