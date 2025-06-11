@@ -9,9 +9,6 @@ image:
   alt: "The Astro logo on a dark background with a pink glow."
 tags: ["linuxday"]
 ---
-
-# Linux Day 2020
-
 Il Linux Day 2020 non avrà un evento locale a causa del COVID-19. La ventesima edizione dell’evento nazionale si terrà totalmente online nei giorni 24 e 25 ottobre.
 
 Per scoprire il programma delle giornate clicca il seguente link:

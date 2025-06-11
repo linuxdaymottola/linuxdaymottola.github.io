@@ -9,8 +9,7 @@ image:
   alt: "The Astro logo on a dark background with a pink glow."
 tags: ["linuxday"]
 ---
-
-# Linux Day 2018
+![Linux Day 2018 Flyer](/images/events/linuxday2018.jpg)
 
 Il Linux Day 2018 – diciassettesima giornata nazionale di GNU/Linux e del software libero, si terrá a Mottola il 27 ottobre 2018 presso la Sala Convengni comunale, sita in Via Vanvitelli.
 L’organizzazione dell’evento é a cura della APS Algorithmi, associazione di promozione sociale in fase di costituzione.

@@ -9,8 +9,7 @@ image:
   alt: "The Astro logo on a dark background with a pink glow."
 tags: ["linuxday"]
 ---
-
-# Linux Day 2016
+![Linux Day 2016 Flyer](/images/events/linuxday2016.jpg)
 
 Il Linux Day 2016 – quindicesima giornata nazionale di GNU/Linux e del software libero, si terrá a Mottola il 22 ottobre 2016 presso il Liceo Scientifico Albert Einstein, in via Peppino Impastato. L’organizzazione dell’evento é a cura del Laboratorio Urbano Labum, nella persona di Alex Grottola, e da un gruppo di appassionati professionisti che rispondono ai nomi di Valerio Como, Carlo Girardi, Francesco De Vincenzo e Giampiero Lamanna.
 
