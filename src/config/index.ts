@@ -75,17 +75,22 @@ export const it = {
     archive: {
       title: "Posts",
       description: "I blog posts",
-      ogImage: "/images/page-meta/it/archive.png",
+      ogImage: "/preview.png",
+    },
+    events: {
+      title: "Eventi",
+      description: "Gli eventi del Linux Day Mottola",
+      ogImage: "/preview.png",
     },
     links: {
-      title: "My Friends",
-      description: "Here are Guoqi Sun's friends",
-      ogImage: "/images/page-meta/it/links.png",
+      title: "Links",
+      description: "Link utili",
+      ogImage: "/preview.png",
     },
     about: {
-      title: "About Me",
-      description: "Here is Guoqi Sun's self-introduction",
-      ogImage: "/images/page-meta/it/about.png",
+      title: "Chi siamo",
+      description: "Chi siamo?",
+      ogImage: "/preview.png",
     },
   },
 }

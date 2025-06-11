@@ -18,6 +18,9 @@ export const ui = {
     "archive.title": "Tutti gli articoli",
     "links.title": "Link utili",
     "tag.title": "Tag:",
+    "tag.events": "Eventi",
+    "tag.posts": "Articoli",
     "tag.no_posts": "Nessun articolo trovato per il tag",
+    "tag.no_events": "Nessun evento trovato per il tag",
   }
 } as const

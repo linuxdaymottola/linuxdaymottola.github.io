@@ -1,10 +1,11 @@
 ---
 import TagComponent from "~/components/astro/tag.astro"
 import { langs } from "~/i18n/ui"
-import { getPostsByLocale } from "~/utils"
+import { getEventsByLocale, getPostsByLocale } from "~/utils"
 
 export interface Props {
   posts: any
+  events: any
   tag: string
 }
 
@@ -12,14 +13,20 @@ export async function getStaticPaths() {
   const paths = await Promise.all(
     langs.map(async (lang) => {
       const posts = await getPostsByLocale(lang)
-      const uniqueTags = [
-        ...new Set(posts.flatMap((post: any) => post.data.tags || [])),
+      const events = await getEventsByLocale(lang)
+
+      const allTags = [
+        ...posts.flatMap((post: any) => post.data.tags || []),
+        ...events.flatMap((event: any) => event.data.tags || []),
       ]
+
+      const uniqueTags = [...new Set(allTags)]
 
       return uniqueTags.map((tag) => ({
         params: { tag, lang },
         props: {
           posts,
+          events,
           tag,
         },
       }))

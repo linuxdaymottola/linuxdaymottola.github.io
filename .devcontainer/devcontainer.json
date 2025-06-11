@@ -1,5 +1,3 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
 	"name": "linuxdaymottola.it",
 	"runArgs": [
@@ -13,11 +11,9 @@
 	"containerEnv": {
 		"CHOKIDAR_USEPOLLING": "true"
 	},
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
 	"mounts": [
 		"source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
-		// "source=${localWorkspaceFolderBasename}-pnpm-store,target=${containerWorkspaceFolder}/.pnpm-store,type=volume"
 	],
 	"postCreateCommand": "sh ./.devcontainer/postCreateCommand.sh",
 	"customizations": {
