@@ -1,6 +1,6 @@
 import { Github, Twitter } from "lucide-react"
 
-export const defaultLanguage: string = "en"
+export const defaultLanguage: string = "it"
 
 export const common = {
   domain: "https://www.linuxdaymottola.it",
@@ -45,7 +45,7 @@ export const common = {
   },
 }
 
-export const zh = {
+const zh = {
   ...common,
   siteName: "Linux Day Mottola",
   meta: {
@@ -82,7 +82,7 @@ export const zh = {
   },
 }
 
-export const en = {
+const en = {
   ...common,
   siteName: "Linux Day Mottola",
   meta: {
@@ -93,12 +93,12 @@ export const en = {
   },
   navigation: {
     ...common.navigation,
-    // custom: [
-    //   {
-    //     label: "CamLife",
-    //     link: "https://camlife.cn",
-    //   },
-    // ],
+    custom: [
+      // {
+      //   label: "CamLife",
+      //   link: "https://camlife.cn",
+      // },
+    ],
   },
   pageMeta: {
     archive: {
@@ -130,6 +130,7 @@ export const it = {
   },
   navigation: {
     ...common.navigation,
+    custom: [] as Array<{ link: string; label: string }>,
     // custom: [
     //   {
     //     label: "CamLife",

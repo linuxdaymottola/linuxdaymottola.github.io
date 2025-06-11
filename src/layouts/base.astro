@@ -2,7 +2,7 @@
 import { NoiseBackground } from "~/components/react/noise-background"
 import { getLangFromUrl } from "~/i18n/utils"
 import { GoogleAnalytics } from "astro-google-analytics"
-import { en, zh, it } from "~/config"
+import { it } from "~/config"
 import { ClientRouter } from "astro:transitions"
 
 import "~/styles/tailwind.css"
@@ -14,12 +14,8 @@ const { title, description, ogImage } = Astro.props
 
 const ogImageURL = new URL(ogImage, Astro.site).href
 const permalink = new URL(Astro.url.pathname, Astro.site).href
-const configMap = new Map([
-  ["zh", zh],
-  ["en", en],
-  ["it", it],
-])
-const config = configMap.get(lang) || en
+const configMap = new Map([["it", it]])
+const config = configMap.get(lang) || it
 ---
 
 <!doctype html>

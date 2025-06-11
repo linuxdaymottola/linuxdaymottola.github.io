@@ -1,5 +1,17 @@
 ---
-import { defaultLanguage } from "~/config"
+import Footer from "~/components/astro/footer.astro"
+import Intro from "~/components/astro/intro.astro"
+import RecentBlogs from "~/components/astro/recent-blogs.astro"
+import MainLayout from "~/layouts/main.astro"
+import { getLanguagePaths } from "~/utils/langs"
+
+export function getStaticPaths() {
+  return getLanguagePaths()
+}
 ---
 
-<meta http-equiv="refresh" content={`0;url=/${defaultLanguage}/`} />
+<MainLayout ogImage="/preview.png">
+  <Intro />
+  <RecentBlogs />
+  <Footer />
+</MainLayout>

@@ -1,8 +1,6 @@
 ---
-import { en, it, zh } from "~/config"
-import AboutContentEn from "~/config/en/about.mdx"
+import { it } from "~/config"
 import AboutContentIt from "~/config/it/about.mdx"
-import AboutContentZh from "~/config/zh/about.mdx"
 import { getLangFromUrl } from "~/i18n/utils"
 import MainLayout from "~/layouts/main.astro"
 import { getLanguagePaths } from "~/utils/langs"
@@ -11,13 +9,9 @@ export function getStaticPaths() {
   return getLanguagePaths()
 }
 const aboutContentMap = {
-  zh: AboutContentZh,
-  en: AboutContentEn,
   it: AboutContentIt,
 }
 const pageMetaMap = {
-  zh: zh.pageMeta,
-  en: en.pageMeta,
   it: it.pageMeta,
 }
 const lang = getLangFromUrl(Astro.url)

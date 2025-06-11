@@ -1,6 +1,5 @@
 ---
 import { Rss } from "lucide-react"
-import { LanguageToggle } from "~/components/react/language-toggle"
 import { ThemeToggle } from "~/components/react/theme-toggle"
 import { getConfigByLang } from "~/config"
 import { getLangFromUrl } from "~/i18n/utils"
@@ -17,12 +16,7 @@ const config = getConfigByLang(lang)
   <div class="flex items-center gap-6">
     {
       config.rss && (
-        <a
-          href={"/" + lang + "/rss.xml"}
-          target="_blank"
-          aria-label="RSS"
-          title="RSS"
-        >
+        <a href={"/rss.xml"} target="_blank" aria-label="RSS" title="RSS">
           <Rss />
         </a>
       )
@@ -41,7 +35,7 @@ const config = getConfigByLang(lang)
       ))
     }
 
-    <LanguageToggle client:load />
+    <!-- <LanguageToggle client:load /> -->
     <ThemeToggle client:load />
   </div>
 </header>

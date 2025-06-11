@@ -1,16 +1,16 @@
 ---
-import { en, it, zh } from "~/config"
+import { it } from "~/config"
 import { getLangFromUrl, useTranslations } from "~/i18n/utils"
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 const navigationMap = new Map([
-  ["zh", zh.navigation],
-  ["en", en.navigation],
+  // ["zh", zh.navigation],
+  // ["en", en.navigation],
   ["it", it.navigation],
 ])
 const { home, archive, custom, links, about } =
-  navigationMap.get(lang) ?? en.navigation
+  navigationMap.get(lang) ?? it.navigation
 ---
 
 <div
@@ -19,7 +19,7 @@ const { home, archive, custom, links, about } =
   {
     home && (
       <a
-        href={`/${lang}`}
+        href={`/`}
         class="hover:underline hover:underline-offset-4"
         aria-label={t("nav.home")}
         title={t("nav.home")}
@@ -32,7 +32,7 @@ const { home, archive, custom, links, about } =
   {
     archive && (
       <a
-        href={`/${lang}/archive`}
+        href={`/archive`}
         class="hover:underline hover:underline-offset-4"
         aria-label={t("nav.archive")}
         title={t("nav.archive")}
@@ -59,7 +59,7 @@ const { home, archive, custom, links, about } =
   {
     links && (
       <a
-        href={`/${lang}/links`}
+        href={`/links`}
         class="hover:underline hover:underline-offset-4"
         aria-label={t("nav.links")}
         title={t("nav.links")}
@@ -72,7 +72,7 @@ const { home, archive, custom, links, about } =
   {
     about && (
       <a
-        href={`/${lang}/about`}
+        href={`/about`}
         class="hover:underline hover:underline-offset-4"
         aria-label={t("nav.about")}
         title={t("nav.about")}
