@@ -14,6 +14,7 @@ export const ui = {
     "nav.archive": "Archivio",
     "nav.about": "Chi siamo",
     "nav.links": "Link",
+    "events.latest": "Ultimi eventi",
     "blog.latest": "Ultimi articoli",
     "archive.title": "Tutti gli articoli",
     "links.title": "Link utili",

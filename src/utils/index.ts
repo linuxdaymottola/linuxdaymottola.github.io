@@ -28,3 +28,14 @@ export const getPostsByLocale = async (locale: string) => {
     (a: any, b: any) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
   )
 }
+
+export const getEventsByLocale = async (locale: string) => {
+  const collectionMap = new Map<string, string>([
+    ["it", "itEvents"],
+  ]);
+  const collectionName = collectionMap.get(locale) || "itEvents";
+  const posts = await getCollection(collectionName as any)
+  return posts.sort(
+    (a: any, b: any) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  )
+}

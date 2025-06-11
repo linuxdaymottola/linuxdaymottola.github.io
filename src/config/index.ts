@@ -35,6 +35,7 @@ export const common = {
     about: true,
   },
   latestPosts: 8,
+  latestEvents: 5,
   comments: {
     enabled: true,
     twikoo: {

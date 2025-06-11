@@ -1,0 +1,23 @@
+---
+interface Props {
+  event: any
+  lang: string
+  dateFormat?: string
+  dateWidth?: string
+}
+
+const { event, lang, dateFormat = "default", dateWidth = "w-36" } = Astro.props
+import { formatDate } from "~/utils"
+---
+
+<a
+  href={`/events/${event.id}/`}
+  class="my-3 flex visited:text-purple-500/90 md:my-2"
+>
+  <p
+    class={`flex ${dateWidth} flex-shrink-0 truncate text-gray-500 dark:text-gray-400`}
+  >
+    <time>{formatDate(event.data.pubDate, dateFormat)}</time>
+  </p>
+  <p class="line-clamp-2 text-lg hover:underline">{event.data.title}</p>
+</a>

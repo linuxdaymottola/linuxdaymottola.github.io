@@ -1,0 +1,24 @@
+---
+import { common } from "~/config"
+import { getLangFromUrl, useTranslations } from "~/i18n/utils"
+import { getEventsByLocale } from "~/utils"
+import EventList from "./event-list.astro"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
+const allEvents = await getEventsByLocale(lang)
+const events = allEvents.slice(0, common.latestPosts)
+---
+
+<div class="my-8 text-xl font-medium md:my-8">{t("events.latest")}</div>
+{
+    events.map((event: any) => (
+        <EventList
+            event={event}
+            lang={lang}
+            dateFormat="YYYY-MM-DD"
+            dateWidth="w-32"
+        />
+    ))
+}

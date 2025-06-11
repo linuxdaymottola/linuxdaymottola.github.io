@@ -16,6 +16,12 @@ const itPostsCollection = defineCollection({
   schema: postSchema,
 })
 
+const itEventsCollection = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/events/it" }),
+  schema: postSchema
+})
+
 export const collections = {
   itPosts: itPostsCollection,
+  itEvents: itEventsCollection
 }
