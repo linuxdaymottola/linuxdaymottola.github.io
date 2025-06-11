@@ -36,5 +36,8 @@
 				}
 			}
 		}
+	},
+	"features": {
+		"ghcr.io/jckimble/devcontainer-features/ngrok:3": {}
 	}
 }
