@@ -3,11 +3,11 @@ import { Facebook, Github, Instagram, Twitter } from "lucide-react";
 export const defaultLanguage: string = "it"
 
 export const common = {
-  domain: "https://www.linuxdaymottola.it",
+  domain: "https://linuxdaymottola.github.io",//"https://www.linuxdaymottola.it",
   logo: "/images/logo.jpg",
   meta: {
     favicon: "/avatar.png",
-    url: "https://www.linuxdaymottola.it",
+    url: "https://linuxdaymottola.github.io"//"https://www.linuxdaymottola.it",
   },
   googleAnalyticsId: "",
   social: [

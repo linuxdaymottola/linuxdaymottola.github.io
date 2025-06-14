@@ -1,6 +1,6 @@
 import rss from "@astrojs/rss"
 import { it } from "~/config"
-import { getPostsByLocale } from "~/utils"
+import { getEventsByLocale } from "~/utils"
 import { getLanguagePaths } from "~/utils/langs"
 
 export function getStaticPaths() {
@@ -13,7 +13,7 @@ export async function GET(request: { url: URL }) {
   const lang = "it"
   const config = it
 
-  const posts = await getPostsByLocale(lang)
+  const events = await getEventsByLocale(lang)
 
   return rss({
     title: config.meta.title,
@@ -22,12 +22,12 @@ export async function GET(request: { url: URL }) {
       process.env.NODE_ENV === "development"
         ? "http://localhost:4321"
         : config.meta.url,
-    items: posts.map((post: any) => ({
-      title: post.data.title,
-      description: post.data.description,
-      pubDate: post.data.pubDate,
-      link: `/posts/${post.id}/`,
-      content: post.rendered ? post.rendered.html : post.data.description,
+    items: events.map((event: any) => ({
+      title: event.data.title,
+      description: event.data.description,
+      pubDate: event.data.pubDate,
+      link: `/posts/${event.id}/`,
+      content: event.rendered ? event.rendered.html : event.data.description,
     })),
     customData: "",
   })
