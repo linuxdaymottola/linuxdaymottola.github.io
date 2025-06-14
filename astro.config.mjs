@@ -14,11 +14,14 @@ const site = isProduction
   ? "https://linuxdaymottola.github.io"
   : "http://localhost:3000/"
 
+const base = isProduction ? "linuxdaymottola" : ""
+
 // https://astro.build/config
 export default defineConfig({
   output: "static",
   prefetch: true,
   site,
+  base,
   server: {
     host: "127.0.0.1",
     port: 4321,
