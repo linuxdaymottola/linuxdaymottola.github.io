@@ -9,11 +9,18 @@ import { defineConfig } from "astro/config"
 
 import robotsTxt from "astro-robots-txt"
 
+const isProduction = process.env.NODE_ENV === "production"
+const site = isProduction ? BASE_URL : "http://localhost:3000/"
+
 // https://astro.build/config
 export default defineConfig({
   output: "static",
   prefetch: true,
-  site: "https://astro-air.guoqi.dev",
+  site,
+  server: {
+    host: "127.0.0.1",
+    port: 4321,
+  },
   vite: {
     plugins: [tailwindcss()],
   },
