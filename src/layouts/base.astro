@@ -23,7 +23,10 @@ const config = configMap.get(lang) || it
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href={config.meta.favicon} />
+    <link rel="icon" href={config.meta.favicon} sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    {/* Per icone home screen su iOS */}
+    <link rel="manifest" href="/site.webmanifest" />
     <title>
       {
         title

@@ -6,7 +6,7 @@ export const common = {
   domain: "https://linuxdaymottola.github.io",//"https://www.linuxdaymottola.it",
   logo: "/images/logo.jpg",
   meta: {
-    favicon: "/avatar.png",
+    favicon: "/favicon.ico",
     url: "https://linuxdaymottola.github.io"//"https://www.linuxdaymottola.it",
   },
   googleAnalyticsId: "",
