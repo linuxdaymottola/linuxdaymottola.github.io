@@ -11,7 +11,7 @@ import robotsTxt from "astro-robots-txt"
 
 const isProduction = process.env.NODE_ENV === "production"
 const site = isProduction
-  ? "https://linuxdaymottola.github.io"
+  ? "https://www.linuxdaymottola.it"
   : "http://localhost:3000/"
 
 // https://astro.build/config
